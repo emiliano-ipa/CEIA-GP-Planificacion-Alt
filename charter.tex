@@ -108,7 +108,7 @@ Se adjunta a esta acta la planificación inicial.
 
 El presente proyecto se realiza en el marco la Especialización en Inteligencia Artificial, y surge a partir de la experiencia profesional del alumno como consultor en planificación financiera y business intelligence en Cagnoli S.A., una empresa argentina con más de un siglo de trayectoria en la industria de alimentos. La firma se especializa en la elaboración de fiambres y embutidos de alta calidad, y cuenta con diferentes unidades productivas organizadas en ciclos. En particular, este trabajo se enfoca en el Ciclo III (producción de fiambres y chacinados), correspondiente a la producción de productos secos (salamines), una de las líneas más relevantes por su imagen de marca, volumen de ventas y contribución al margen.
 
-El objetivo del proyecto es diseñar una herramienta de planificación financiera inteligente basada en Inteligencia Artificial, orientada a prever la demanda y estimar márgenes brutos por producto y canal. La solución incluirá además un módulo de simulación de escenarios operativos y financieros, permitiendo evaluar impactos ante cambios en variables clave como precios de insumos, regulaciones o patrones de consumo. Este enfoque busca mejorar la toma de decisiones en las reuniones de planificación mensual que integran lo comercial, productivo y financiero.
+El objetivo del proyecto es diseñar una herramienta de planificación financiera basada en Inteligencia Artificial, orientada a pronosticar la demanda y estimar márgenes brutos por producto y canal. La solución incluirá además un módulo de simulación de escenarios, permitiendo evaluar impactos ante cambios en variables operativas y financieras clave como merma en el proceso, precios de insumos, regulaciones o patrones de consumo. Este enfoque busca mejorar la toma de decisiones de manera objetiva para aplicar en el proceso de planificación mensual que integra las áreas comercial, producción y finanzas.
 
 No existen actualmente acuerdos de confidencialidad o financiamiento externo. Los entregables serán propiedad del alumno, y se resguardará la confidencialidad comercial en caso de futuras publicaciones académicas.
 
@@ -118,7 +118,7 @@ El proceso de elaboración de productos secos implica tiempos prolongados de mad
 La empresa, si bien ha incorporado recientemente herramientas de control de gestión y planificación, aún no cuenta con modelos predictivos robustos que integren física y financieramente el negocio.
 
 \subsection*{Aspectos técnicos y estado del arte}
-La solución se encuentra en una etapa temprana del ciclo de vida: diseño conceptual, análisis del problema y planificación del desarrollo. Durante el proyecto se avanzará hasta el desarrollo funcional del modelo, su evaluación en entorno de pruebas y su validación con datos reales, sin integrar aún con los sistemas transaccionales de la empresa.
+La solución se encuentra en una etapa temprana del ciclo de vida: diseño conceptual, análisis del problema y planificación del desarrollo. Durante el proyecto se avanzará hasta el desarrollo funcional del modelo, su evaluación en entorno de pruebas y su validación con datos reales, sin incluir en el alcance aún la integración de la solución con los sistemas transaccionales de la empresa.
 
 En la figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema propuesto. Se observa cómo, a partir de diversas fuentes de datos (ventas históricas, costos variables, eventos comerciales y variables externas), el sistema procesa la información mediante tres módulos: uno de predicción de demanda (basado en SARIMA, Prophet y algoritmos de machine learning supervisado como XGBoost y Random Forest), uno de estimación de márgenes (que calcula costos y contribución marginal proyectada), y otro de simulación de escenarios (utilizando árboles de decisión y análisis "what if"). La salida de este procesamiento se visualiza mediante Power BI o Streamlit, generando reportes que sirven como insumo clave para las reuniones mensuales de planificación operativa y financiera.
 
@@ -135,7 +135,7 @@ En la figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistem
 
 
 \subsection*{Cliente y valor esperado}
-El principal cliente del proyecto es el equipo de planificación, que requiere información confiable y anticipada para mejorar sus decisiones. La innovación del proyecto radica en conectar el planeamiento operativo y financiero con modelos predictivos y simulación en una plataforma visual y accesible.
+El principal cliente del proyecto es el equipo de planificación, ya que requiere información confiable y anticipada para mejorar sus decisiones. La innovación del proyecto radica en conectar el planeamiento operativo y financiero con modelos predictivos y simulación en una plataforma visual y accesible.
 La solución permitirá analizar semanalmente las proyecciones de demanda y márgenes por canal, junto con simulaciones de impacto financiero ante cambios en precios de insumos o contexto de mercado. Será utilizada como insumo objetivo en las reuniones mensuales de planificación comercial y presupuestaria.
 
 \section{2. Identificación y análisis de los interesados}
@@ -169,7 +169,7 @@ A continuación, se listan las principales características de cada interesado:
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
-El propósito de este proyecto es desarrollar un modelo predictivo basado en inteligencia artificial que prevea la demanda y los márgenes brutos por producto y canal, integrando datos del sistema ERP de la compañía, costos dinámicos e información comercial. Adicionalmente, como último paso, se incluirá una capa de simulación de escenarios para evaluar impactos de condiciones externas (precios de insumos, regulaciones) sobre los resultados financieros. Esta solución permite integrar planificación operativa y financiera en un flujo de trabajo inteligente, proporcionando información confiable y anticipada para la toma de decisiones estratégicas.
+El propósito de este proyecto es desarrollar un modelo predictivo basado en inteligencia artificial que prevea la demanda y los márgenes brutos por producto y canal, integrando datos del sistema ERP de la compañía, costos dinámicos e información comercial. Adicionalmente, como último paso, se incluirá una capa de simulación de escenarios para evaluar impactos de cambios en variables críticas sobre los resultados financieros. Esta solución permite aportar herramientas objetivas para la planificación operativa y financiera integrada en un flujo de trabajo inteligente, proporcionando información confiable y anticipada para la toma de decisiones.
 
 
 \section{4. Alcance del proyecto}
@@ -181,7 +181,7 @@ El proyecto se centrará exclusivamente en la familia de productos secos (salami
 El presente proyecto incluye:
 \begin{itemize}
 	\item El diseño y validación de modelos de predicción de demanda utilizando algoritmos de series temporales (SARIMA, Prophet) y machine learning supervisado (XGBoost, Random Forest).
-	\item La estimación proyectada de márgenes brutos por canal, integrando costos dinámicos de producción y distribución.
+	\item La estimación proyectada de márgenes brutos por canal, integrando precios estimados, con los costos dinámicos de producción y de distribución.
 	\item La simulación de escenarios mediante árboles de decisión y análisis de sensibilidad, para evaluar impactos financieros ante variaciones en precios, demanda o restricciones operativas.
 	\item Una prueba de concepto visual (PoC), implementada en Power BI y/o Streamlit, destinada a facilitar la interpretación y evaluación de los resultados por parte de los equipos internos.
 
@@ -191,8 +191,8 @@ El presente proyecto incluye:
 El presente proyecto no incluye:
 \begin{itemize}
 	\item El entrenamiento formal a usuarios finales o su incorporación en la rutina operativa de la empresa.
-	\item La integración técnica con sistemas transaccionales o el ERP (Microsoft Dynamics).
-	\item La incorporación de otras líneas de productos (como cocidos o frescos), más allá de la familia de productos secos.
+	\item La integración técnica con sistemas transaccionales o con el sistema ERP de la compañía (Microsoft Dynamics).
+	\item La incorporación de otras líneas de productos como cocidos o frescos al análisis, que se encuentran más allá de la familia de productos secos.
 
 \end{itemize}
 
