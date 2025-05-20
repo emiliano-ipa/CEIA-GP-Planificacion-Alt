@@ -29,8 +29,8 @@
 \empresaCliente{Cagnoli S.A.}
  
 \fechaINICIO{29 de abril de 2025}		%Fecha de inicio de la cursada de GdP \fechaInicioName
-\fechaFINALPlan{16 de junio de 2025} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{15 de marzo de 2026}	%Fecha de defensa pública del trabajo final
+\fechaFINALPlan{17 de junio de 2025} 	%Fecha de final de cursada de GdP
+\fechaFINALTrabajo{xx de xxx de 2026}	%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -60,7 +60,7 @@
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
 1      & Se completa hasta el punto 5 inclusive                & {13} de {mayo} de 2025 \\ \hline
-%2      & Se completa hasta el punto 9 inclusive
+2      & Se completa hasta el punto 9 inclusive                & {20} de {mayo} de 2025 \\ \hline
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
 %		  Así                                                    & {día} de {mes} de 202X \\ \hline
@@ -85,7 +85,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en \textcolor{black}{desarrollar un modelo basado en inteligencia artificial para predecir la demanda y los márgenes brutos de productos secos en Cagnoli S.A., integrándolo al proceso de planificación financiera para mejorar la toma de decisiones y simular escenarios}. El trabajo tendrá un presupuesto preliminar estimado de \textcolor{red}{600} horas y un costo estimado de \textcolor{red}{\$ XXX}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en \textcolor{black}{desarrollar un modelo basado en inteligencia artificial para predecir la demanda y los márgenes brutos de productos secos en Cagnoli S.A., integrándolo al proceso de planificación financiera para mejorar la toma de decisiones y simular escenarios}. El trabajo tendrá un presupuesto preliminar estimado de 612 horas y un costo estimado de \textcolor{red}{\$ XXX}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \textcolor{red} {\fechaFinalName}.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -106,9 +106,9 @@ Se adjunta a esta acta la planificación inicial.
 \section{1. Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
-El presente proyecto se realiza en el marco la Especialización en Inteligencia Artificial, y surge a partir de la experiencia profesional del alumno como consultor en planificación financiera y business intelligence en Cagnoli S.A., una empresa argentina con más de un siglo de trayectoria en la industria de alimentos. La firma se especializa en la elaboración de fiambres y embutidos de alta calidad, y cuenta con diferentes unidades productivas organizadas en ciclos. En particular, este trabajo se enfoca en el Ciclo III (producción de fiambres y chacinados), correspondiente a la producción de productos secos (salamines), una de las líneas más relevantes por su imagen de marca, volumen de ventas y contribución al margen.
+El presente proyecto se realiza en el marco de la Especialización en Inteligencia Artificial, y surge a partir de la experiencia profesional del alumno como consultor en planificación financiera e inteligencia de negocios en Cagnoli S.A., una empresa argentina con más de un siglo de trayectoria en la industria de alimentos. La firma se especializa en la elaboración de fiambres y embutidos con estándares de calidad certificados, y cuenta con distintas unidades productivas organizadas en ciclos. En particular, este trabajo se enfoca en el \textbf{Ciclo III} (producción de fiambres y chacinados), correspondiente a la producción de productos secos (salamines), una de las líneas más relevantes por su imagen de marca, volumen de ventas y contribución al margen.
 
-El objetivo del proyecto es diseñar una herramienta de planificación financiera basada en Inteligencia Artificial, orientada a pronosticar la demanda y estimar márgenes brutos por producto y canal. La solución incluirá además un módulo de simulación de escenarios, permitiendo evaluar impactos ante cambios en variables operativas y financieras clave como merma en el proceso, precios de insumos, regulaciones o patrones de consumo. Este enfoque busca mejorar la toma de decisiones de manera objetiva para aplicar en el proceso de planificación mensual que integra las áreas comercial, producción y finanzas.
+El objetivo del proyecto es diseñar una herramienta de planificación financiera basada en Inteligencia Artificial, orientada a pronosticar la demanda y estimar márgenes brutos por producto y canal. Además, se desarrollará un módulo de simulación de escenarios operativos y financieros que permita evaluar el impacto ante posibles variaciones en factores críticos como mermas productivas, precios de insumos, regulaciones o cambios en el patrón de consumo. Esta herramienta busca integrarse al proceso de planificación mensual que coordina las áreas Comercial, Producción y Finanzas, con el fin de mejorar así la calidad de las decisiones.
 
 No existen actualmente acuerdos de confidencialidad o financiamiento externo. Los entregables serán propiedad del alumno, y se resguardará la confidencialidad comercial en caso de futuras publicaciones académicas.
 
@@ -120,7 +120,7 @@ La empresa, si bien ha incorporado recientemente herramientas de control de gest
 \subsection*{Aspectos técnicos y estado del arte}
 La solución se encuentra en una etapa temprana del ciclo de vida: diseño conceptual, análisis del problema y planificación del desarrollo. Durante el proyecto se avanzará hasta el desarrollo funcional del modelo, su evaluación en entorno de pruebas y su validación con datos reales, sin incluir en el alcance aún la integración de la solución con los sistemas transaccionales de la empresa.
 
-En la figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema propuesto. Se observa cómo, a partir de diversas fuentes de datos (ventas históricas, costos variables, eventos comerciales y variables externas), el sistema procesa la información mediante tres módulos: uno de predicción de demanda (basado en SARIMA, Prophet y algoritmos de machine learning supervisado como XGBoost y Random Forest), uno de estimación de márgenes (que calcula costos y contribución marginal proyectada), y otro de simulación de escenarios (utilizando árboles de decisión y análisis "what if"). La salida de este procesamiento se visualiza mediante Power BI o Streamlit, generando reportes que sirven como insumo clave para las reuniones mensuales de planificación operativa y financiera.
+En la figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema propuesto. Se observa cómo, a partir de diversas fuentes de datos (ventas históricas, costos variables, eventos comerciales y variables externas), el sistema procesa la información mediante tres módulos: uno de predicción de demanda (basado en SARIMA, Prophet y algoritmos de \textit{machine learning} supervisado como XGBoost y Random Forest), uno de estimación de márgenes (que calcula costos y contribución marginal proyectada), y otro de simulación de escenarios (utilizando árboles de decisión y análisis "what if"). La salida de este procesamiento se visualiza mediante Power BI o Streamlit, generando reportes que sirven como insumo clave para las reuniones mensuales de planificación operativa y financiera.
 
 \vspace{15px}
 
@@ -160,8 +160,9 @@ Usuario final & Analistas de Planificación                  & Cagnoli S.A.     
 
 A continuación, se listan las principales características de cada interesado:
 \begin{itemize}
-	\item Cliente: el Cr. Santiago Pagola va a ayudar con la explicación del proceso de planificación, la definición de los requerimientos y la coordinación de ejecución de pruebas de aceptación.
-	\item Impulsor: el Ing. Juan Pedro Cagnoli es el principal impulsor y sponsor de este proyecto dentro de la organización. Este proyecto forma parte de una serie de cambios organizacionales impulsados por este actor para mejorar la planificación, aumentar la eficacia de pronóstico y objetivar la toma de decisiones.
+	\item Cliente: el Cr. Santiago Pagola colaborará con la explicación del proceso de planificación, la definición de los requerimientos y la coordinación de ejecución de pruebas de aceptación.
+	\item Impulsor: el Ing. Juan Pedro Cagnoli es el principal referente y sponsor de este proyecto dentro de la organización. Esta acción se inserta en un conjunto de iniciativas estratégicas que él mismo ha impulsado, con el propósito de perfeccionar la planificación, aumentar la precisión de los pronósticos y sustentar las decisiones empresariales en modelos objetivos.
+	\item Orientador: \textcolor{red}{características del orientador.}
 	\item Usuario final: los analistas del Departamento de Planificación son los usuarios finales de esta herramienta, antes y durante las reuniones de planificación, junto al resto de las áreas involucradas (Comercial, Producción, Logística y Compras).
 \end{itemize}
 
@@ -180,8 +181,8 @@ El proyecto se centrará exclusivamente en la familia de productos secos (salami
 
 El presente proyecto incluye:
 \begin{itemize}
-	\item El diseño y validación de modelos de predicción de demanda utilizando algoritmos de series temporales (SARIMA, Prophet) y machine learning supervisado (XGBoost, Random Forest).
-	\item La estimación proyectada de márgenes brutos por canal, integrando precios estimados, con los costos dinámicos de producción y de distribución.
+	\item El diseño y validación de modelos de predicción de demanda, basados en algoritmos de series temporales (SARIMA, Prophet) y métodos de aprendizaje automático supervisado (XGBoost, Random Forest).
+	\item La estimación proyectada de márgenes brutos por canal, a partir de precios previstos y costos dinámicos asociados a producción y distribución.
 	\item La simulación de escenarios mediante árboles de decisión y análisis de sensibilidad, para evaluar impactos financieros ante variaciones en precios, demanda o restricciones operativas.
 	\item Una prueba de concepto visual (PoC), implementada en Power BI y/o Streamlit, destinada a facilitar la interpretación y evaluación de los resultados por parte de los equipos internos.
 
@@ -203,10 +204,11 @@ El presente proyecto no incluye:
 Para el desarrollo del presente proyecto se supone que:
 
 \begin{itemize}
-	\item Se contará con acceso oportuno y completo a los datasets históricos necesarios para el modelado: ventas, costos, inventarios, estacionalidad, calendario comercial, entre otros. Los datos estarán en formato utilizable y reflejarán fielmente la realidad operativa del negocio.
+	\item Se contará con acceso oportuno y completo a los \textit{datasets} históricos necesarios para el modelado: ventas, costos, inventarios, estacionalidad, calendario comercial, entre otros. Los datos estarán en formato utilizable y reflejarán fielmente la realidad operativa del negocio.
 	\item Se prevé que tanto el alumno como los referentes internos de la empresa (Departamento de Planificación) podrán destinar el tiempo necesario para reuniones, revisiones de avances, validación de entregables y provisión de información contextual.
 	\item Se considera que las herramientas previstas (Python, bibliotecas de IA, Streamlit, Power BI, etc.) son adecuadas para el desarrollo del sistema, y que no surgirán restricciones técnicas críticas que impidan ejecutar los modelos o visualizar los resultados.
-	\item El desarrollo se realizará utilizando los recursos disponibles del alumno (hardware personal, conectividad, acceso a herramientas open source). No se prevé la necesidad de inversiones adicionales en infraestructura o licencias.
+	\item El desarrollo se llevará a cabo con los recursos disponibles del alumno (hardware personal, conectividad y acceso a herramientas de código abierto). No se prevé la necesidad de inversiones adicionales en infraestructura o licencias.
+	
 	\item Se asume que no existirán bloqueos internos, resistencias de parte de otras áreas o barreras políticas que interfieran con el acceso a la información o con la validación de resultados por parte del equipo de planificación.
 	\item Para las simulaciones y la interpretación de resultados, se asume que no ocurrirán cambios abruptos en el contexto macroeconómico (inflación, precios regulados, normativas sanitarias) que invaliden los patrones históricos o generen disrupciones graves en la operatoria de la empresa.
 	\item Se considera que los datos históricos reflejan adecuadamente la variabilidad esperada del negocio, y que son válidos para el entrenamiento y evaluación de modelos predictivos.
@@ -216,149 +218,510 @@ Para el desarrollo del presente proyecto se supone que:
 \section{6. Product Backlog}
 \label{sec:backlog}
 
-El Product Backlog debe organizarse en cuatro \textbf{\textit{\'{e}picas}} fundamentales del proyecto. Cada \'{e}pica debe contener al menos dos historias de usuario que describan funcionalidades clave.
-
-El Product Backlog debe permitir interpretar cómo será el proyecto y su funcionalidad. Se deben indicar claramente las prioridades entre las historias de usuario y si hay alguna opcional.
-
-Las historias de usuario deben ser breves, claras y medibles, expresando el rol, la necesidad y el propósito de cada funcionalidad. También deben tener una prioridad definida para facilitar la planificación de los sprints.
-
-Cada historia de usuario debe incluir una ponderación en \textit{Story Points}, un número entero que representa el tama\~no relativo de la historia. El criterio para calcular los Story Points debe indicarse explícitamente.
-
-Las historias deben seguir el formato: ``\textit{Como [rol], quiero [tal cosa] para [tal otra cosa]}''.
-
-Las \'{e}picas deben estructurarse de la siguiente forma:
-
+Los criterios para calcular los story points estarán divididos de la siguiente manera:
 \begin{itemize}
-  \item \textbf{\'{E}pica 1}
+	\item \textbf{Dificultad (1–5)}: evalúa nivel de esfuerzo técnico y de desarrollo requerido.
+	\item \textbf{Complejidad (1–5)}: referido al grado de conocimiento y experiencia necesarios.
+	\item \textbf{Riesgo (1–5)}: pondera la incertidumbre técnica, disponibilidad de datos, o dependencias externas.
+\end{itemize}
+
+Para la ponderación en cada uno de ellos se utilizará la serie de \textit{Fibonacci} desde el 1 al 8, quedando: bajo (1), medio (3), alto (5) y muy alto (8).
+
+\subsection*{6.1. Épica 1: Modelado de demanda}
+\begin{itemize}
+  \item \textbf{Historia de usuario 1:} como analista de planificación operativa, quiero contar con un modelo de predicción de demanda semanal por producto, para anticipar las necesidades de producción.
     \begin{itemize}
-      \item HU1
-      \item HU2
+      \item \textbf{Dificultad}: alto (5). Requiere diseño, entrenamiento y validación de modelos.
+      \item \textbf{Complejidad}: alto (5). Involucra series temporales con estacionalidad marcada y ruido.
+      \item \textbf{Riesgo}: medio (3). Depende de la calidad y granularidad de los datos históricos.
+      \item \textbf{Story Points} = 5 + 5 + 3 = 13.
+      \item \textbf{Prioridad}: alta.
     \end{itemize}
-  \item \textbf{\'{E}pica 2}
+  \item \textbf{Historia de usuario 2:} como responsable comercial, quiero contar con alertas ante desvíos significativos entre demanda proyectada y real, para poder ajustar rápidamente la estrategia de ventas.
     \begin{itemize}
-      \item HU3
-      \item HU4
+      \item \textbf{Dificultad}: medio (3). Requiere definir umbrales y condiciones de alerta.
+      \item \textbf{Complejidad}: medio (3). Necesita cálculos comparativos en tiempo real.
+      \item \textbf{Riesgo}: bajo (1). El riesgo se acota al mal ajuste de los parámetros de alerta.
+      \item \textbf{Story Points} = 3 + 3 + 1 = 7.
+      \item \textbf{Prioridad}: media.
     \end{itemize}
-  \item \textbf{\'{E}pica 3}
+  \item \textbf{Historia de usuario 3 (opcional):} como jefe de producción, quiero acceder a predicciones semanales agregadas por línea de producto, para facilitar la planificación de turnos y uso de capacidad.
     \begin{itemize}
-      \item HU5
-      \item HU6
-    \end{itemize}
-  \item \textbf{\'{E}pica 4}
-    \begin{itemize}
-      \item HU7
-      \item HU8
+      \item \textbf{Dificultad}: bajo (2). Se trata de una agregación de las predicciones ya existentes.
+      \item \textbf{Complejidad}: bajo (2). Es una funcionalidad de fácil desarrollo.
+      \item \textbf{Riesgo}: muy bajo (0). Baja dependencia de factores externos.
+      \item \textbf{Story Points} = 2 + 2 + 0 = 4.
+      \item \textbf{Prioridad}: baja.
     \end{itemize}
 \end{itemize}
 
-\textbf{Reglas para definir historias de usuario:}
+\subsection*{6.2. Épica 2: Cálculo de márgenes brutos}
 \begin{itemize}
-  \item Ser concisas y claras.
-  \item Expresarlas en términos cuantificables y medibles.
-  \item No dejar margen para interpretaciones ambiguas.
-  \item Indicar claramente su prioridad y si son opcionales.
-  \item Considerar regulaciones y normas vigentes.
+  \item \textbf{Historia de usuario 4:} como responsable de control de gestión, quiero estimar los márgenes brutos por canal y producto, para evaluar la rentabilidad futura.
+    \begin{itemize}
+      \item \textbf{Dificultad}: alto (5). Implica cálculo automático y segmentación por canal.
+      \item \textbf{Complejidad}: alto (5). Requiere integrar costos y precios de múltiples fuentes.
+      \item \textbf{Riesgo}: medio (3). Riesgo medio por variabilidad en la estructura de costos.
+      \item \textbf{Story Points} = 5 + 5 + 3 = 13.
+      \item \textbf{Prioridad}: alta.
+    \end{itemize}
+  \item \textbf{Historia de usuario 5:} como analista financiero, quiero integrar dinámicamente los costos de insumos y logística al cálculo de márgenes, para reflejar los cambios del entorno.
+    \begin{itemize}
+      \item \textbf{Dificultad}: medio (4). Requiere modelar funciones de costo con datos variables.
+      \item \textbf{Complejidad}: medio (3). Debe incluir actualizaciones periódicas y automatización.
+      \item \textbf{Riesgo}: bajo (1). Los datos suelen estar disponibles en el ERP.
+      \item \textbf{Story Points} = 4 + 3 + 1 = 8.
+      \item \textbf{Prioridad}: media.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{6.3. Épica 3: simulación de escenarios}
+\begin{itemize}
+  \item \textbf{Historia de usuario 6:} como director comercial, quiero simular escenarios ante cambios en el precio de venta de los productos, para anticipar su impacto económico.
+    \begin{itemize}
+      \item \textbf{Dificultad}: alto (5). Requiere árboles de decisión y simulación dinámica.
+      \item \textbf{Complejidad}: alto (4). Debe considerar elasticidades y sensibilidad de variables.
+      \item \textbf{Riesgo}: alto (4). El modelo puede ser sensible a inputs inciertos.
+      \item \textbf{Story Points} = 5 + 4 + 4 = 13.
+      \item \textbf{Prioridad}: alta.
+    \end{itemize}
+  \item \textbf{Historia de usuario 7:} como gerente de planta, quiero modelar la capacidad instalada y la ociosidad según distintos niveles de demanda, para optimizar la producción.
+    \begin{itemize}
+      \item \textbf{Dificultad}: medio (4). Requiere modelar la planta con datos reales de capacidad.
+      \item \textbf{Complejidad}: medio (3). Supone parametrizar restricciones operativas.
+      \item \textbf{Riesgo}: bajo (1). Baja incertidumbre si se dispone de datos internos.
+      \item \textbf{Story Points} = 4 + 3 + 1 = 8.
+      \item \textbf{Prioridad}: media.
+    \end{itemize}
+  \item \textbf{Historia de usuario 8 (opcional):} como analista, quiero simular restricciones operativas (por ejemplo, cortes de gas), para cuantificar su impacto en márgenes.
+    \begin{itemize}
+      \item \textbf{Dificultad}: medio (3). Se basa en inputs simples de disponibilidad.
+      \item \textbf{Complejidad}: bajo (2). La lógica de escenarios es sencilla.
+      \item \textbf{Riesgo}: muy bajo (0). No tiene efectos permanentes en el modelo.
+      \item \textbf{Story Points} = 3 + 2 + 0 = 5.
+      \item \textbf{Prioridad}: baja.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{6.4. Épica 4: visualización y prueba de concepto (PoC)}
+\begin{itemize}
+  \item \textbf{Historia de usuario 9:} como usuario final, quiero visualizar los resultados de la predicción y simulación en dashboards interactivos, para tomar decisiones más informadas.
+    \begin{itemize}
+      \item \textbf{Dificultad}: medio (4). Requiere conectar datos y construir visualizaciones.
+      \item \textbf{Complejidad}: medio (3). Necesita UX clara y efectiva.
+      \item \textbf{Riesgo}: bajo (1). Baja probabilidad de error si se usan herramientas estándar.
+      \item \textbf{Story Points} = 4 + 3 + 1 = 8.
+      \item \textbf{Prioridad}: alta.
+    \end{itemize}
+  \item \textbf{Historia de usuario 10:} como responsable de planificación, quiero comparar escenarios base y alternativos en un mismo tablero, para evaluar planes de acción.
+    \begin{itemize}
+      \item \textbf{Dificultad}: medio (3). Visualización comparativa.
+      \item \textbf{Complejidad}: bajo (2). Requiere lógica de selección de escenarios.
+      \item \textbf{Riesgo}: muy bajo (0). Los datos ya están procesados.
+      \item \textbf{Story Points} = 3 + 2 + 0 = 5.
+      \item \textbf{Prioridad}: media.
+    \end{itemize}
+  \item \textbf{Historia de usuario 11 (opcional):} como responsable financiero, quiero exportar la información a Excel desde Power BI o Streamlit, para facilitar reportes internos.
+    \begin{itemize}
+      \item \textbf{Dificultad}: bajo (2). Se trata de una funcionalidad estándar.
+      \item \textbf{Complejidad}: muy bajo (1). Muy baja.
+      \item \textbf{Riesgo}: nulo (0). Prácticamente nulo.
+      \item \textbf{Story Points} = 2 + 1 + 0 = 3.
+      \item \textbf{Prioridad}: baja.
+    \end{itemize}
 \end{itemize}
 
 \section{7. Criterios de aceptación de historias de usuario}
 \label{sec:criteriosAceptacion}
 
-Los criterios de aceptación deben establecerse para cada historia de usuario, asegurando que se cumplan las condiciones necesarias para que la funcionalidad sea validada correctamente.
+En esta sección se definen los criterios de aceptación para cada historia de usuario del backlog, con el objetivo de establecer condiciones específicas, medibles y verificables que permitan validar la funcionalidad desarrollada. 
 
-Cada historia debe tener criterios medibles, específicos y verificables. Deben permitir validar que se cumple con las necesidades del usuario.
-
-Se estructuran de forma análoga a las \'{e}picas del backlog:
+Se utiliza el \textbf{modelo Gherkin}, un enfoque ampliamente adoptado en metodologías ágiles para describir escenarios de prueba funcional en lenguaje natural estructurado. Este modelo sigue una sintaxis sencilla basada en las siguientes expresiones clave:
 
 \begin{itemize}
-  \item \textbf{\'{E}pica 1}
-    \begin{itemize}
-      \item Criterios de aceptación HU1
-      \item Criterios de aceptación HU2
-    \end{itemize}
-  \item \textbf{\'{E}pica 2}
-    \begin{itemize}
-      \item Criterios de aceptación HU3
-      \item Criterios de aceptación HU4
-    \end{itemize}
-  \item \textbf{\'{E}pica 3}
-    \begin{itemize}
-      \item Criterios de aceptación HU5
-      \item Criterios de aceptación HU6
-    \end{itemize}
-  \item \textbf{\'{E}pica 4}
-    \begin{itemize}
-      \item Criterios de aceptación HU7
-      \item Criterios de aceptación HU8
-    \end{itemize}
+  \item \textbf{Dado (Given)}: establece el contexto inicial o condiciones previas.
+  \item \textbf{Cuando (When)}: describe la acción que se va a realizar.
+  \item \textbf{Entonces (Then)}: indica el resultado esperado que permite validar el cumplimiento de la funcionalidad.
 \end{itemize}
 
-\textbf{Reglas para definir criterios de aceptación:}
+Este formato permite una comprensión clara tanto por parte de usuarios técnicos como no técnicos, facilitando la colaboración y alineamiento entre desarrolladores, analistas y stakeholders del proyecto.
+
+\subsection*{7.1. Épica 1: Modelado de demanda}
+
+\paragraph{Criterios de aceptación HU1: Modelo de predicción de demanda semanal por producto}
 \begin{itemize}
-  \item Medibles y verificables.
-  \item Especificar cuándo una historia se considera completada.
-  \item Incluir condiciones específicas.
-  \item No ambiguos.
-  \item Probables de testear funcional o técnicamente.
-  \item Mínimo 3 criterios por HU.
+  \item \textbf{Criterio 1} \\
+  \textbf{Dado} un conjunto de datos históricos de ventas, \\
+  \textbf{cuando} se ejecuta el modelo de predicción, \\
+  \textbf{entonces} se obtiene una proyección semanal por producto con un error MAPE menor al 30\%.
+
+  \item \textbf{Criterio 2} \\
+  \textbf{Dado} un conjunto de productos activos, \\
+  \textbf{cuando} el modelo es entrenado, \\
+  \textbf{entonces} debe generar una salida estructurada (tabla o archivo) con las predicciones para las siguientes 8 semanas.
+
+  \item \textbf{Criterio 3} \\
+  \textbf{Dado} un modelo ya validado, \\
+  \textbf{cuando} se realiza una actualización mensual de datos, \\
+  \textbf{entonces} el modelo debe actualizar sus parámetros automáticamente y emitir un nuevo pronóstico.
+\end{itemize}
+
+\vspace{1em}
+
+\paragraph{Criterios de aceptación HU2: Alertas ante desvíos en la demanda real vs. proyectada}
+\begin{itemize}
+  \item \textbf{Criterio 1} \\
+  \textbf{Dado} un desvío superior al 30\% entre la demanda real y la proyectada, \\
+  \textbf{cuando} se registre la venta semanal, \\
+  \textbf{entonces} el sistema debe generar una alerta visual o por correo electrónico.
+
+  \item \textbf{Criterio 2} \\
+  \textbf{Dado} un conjunto de productos monitoreados, \\
+  \textbf{cuando} se detecten patrones de desvío sistemático en tres semanas consecutivas, \\
+  \textbf{entonces} se debe recomendar una revisión del modelo.
+\end{itemize}
+
+\vspace{1em}
+
+\paragraph{Criterios de aceptación HU3 (opcional): Predicción agregada por línea de producto}
+\begin{itemize}
+  \item \textbf{Criterio 1} \\
+  \textbf{Dado} un grupo de productos pertenecientes a la misma línea, \\
+  \textbf{cuando} se ejecuta la predicción, \\
+  \textbf{entonces} se debe mostrar el resultado agregado en una única fila para la línea correspondiente.
+
+  \item \textbf{Criterio 2} \\
+  \textbf{Dado} un usuario del área de producción, \\
+  \textbf{cuando} consulte la visualización, \\
+  \textbf{entonces} podrá seleccionar líneas de producto y visualizar la demanda proyectada semanalmente.
+\end{itemize}
+
+\subsection*{7.2. Épica 2: Estimación de márgenes brutos por canal}
+
+\paragraph{Criterios de aceptación HU4: Cálculo proyectado de márgenes brutos por producto y canal}
+\begin{itemize}
+  \item \textbf{Criterio 1} \\
+  \textbf{Dado} un conjunto de precios de venta estimados y costos variables actualizados, \\
+  \textbf{cuando} se ejecute el modelo de márgenes, \\
+  \textbf{entonces} debe calcularse automáticamente el margen bruto por producto y canal, expresado en valores absolutos y porcentuales.
+
+  \item \textbf{Criterio 2} \\
+  \textbf{Dado} un conjunto de productos con diferentes estructuras de costos, \\
+  \textbf{cuando} se visualicen los resultados, \\
+  \textbf{entonces} el sistema debe permitir ordenar por margen y detectar productos con contribución negativa.
+
+  \item \textbf{Criterio 3} \\
+  \textbf{Dado} un escenario base de estimaciones, \\
+  \textbf{cuando} se cambien los precios o costos, \\
+  \textbf{entonces} los nuevos márgenes deben actualizarse dinámicamente para reflejar el impacto de la variación.
+\end{itemize}
+
+\vspace{1em}
+
+\paragraph{Criterios de aceptación HU5: Visualización de márgenes históricos y proyectados}
+\begin{itemize}
+  \item \textbf{Criterio 1} \\
+  \textbf{Dado} un producto seleccionado, \\
+  \textbf{cuando} se consulte su historial, \\
+  \textbf{entonces} deben mostrarse en una misma visualización sus márgenes brutos históricos y las proyecciones futuras.
+
+  \item \textbf{Criterio 2} \\
+  \textbf{Dado} un conjunto de productos agrupados por canal, \\
+  \textbf{cuando} se visualicen sus márgenes, \\
+  \textbf{entonces} debe identificarse claramente cuáles tienen márgenes por debajo del umbral mínimo definido por la empresa.
+\end{itemize}
+
+\subsection*{7.3. Épica 3: Simulación de escenarios operativos y financieros}
+
+\paragraph{Criterios de aceptación HU6: Construcción de árbol de decisiones para escenarios}
+\begin{itemize}
+  \item \textbf{Criterio 1} \\
+  \textbf{Dado} un conjunto de decisiones estratégicas posibles (e.g., cambio de precio, capacidad instalada, compras), \\
+  \textbf{cuando} se cargan como insumos al sistema, \\
+  \textbf{entonces} el árbol de decisiones debe construir ramificaciones que representen los distintos caminos posibles y sus resultados económicos esperados.
+
+  \item \textbf{Criterio 2} \\
+  \textbf{Dado} un árbol de decisiones generado, \\
+  \textbf{cuando} se selecciona una rama o nodo final, \\
+  \textbf{entonces} debe mostrarse la utilidad proyectada asociada y el escenario correspondiente de demanda y costos.
+
+  \item \textbf{Criterio 3} \\
+  \textbf{Dado} un escenario base, \\
+  \textbf{cuando} se simula un cambio en una variable crítica (e.g., precio de insumo), \\
+  \textbf{entonces} el árbol debe recalcular los resultados y mostrar las variaciones comparadas al escenario original.
+\end{itemize}
+
+\vspace{1em}
+
+\paragraph{Criterios de aceptación HU7: Análisis de sensibilidad sobre márgenes}
+\begin{itemize}
+  \item \textbf{Criterio 1} \\
+  \textbf{Dado} un conjunto de variables sensibles (precio, volumen, costos), \\
+  \textbf{cuando} se modifique su valor en un rango definido, \\
+  \textbf{entonces} el sistema debe mostrar en tiempo real cómo varía el margen bruto por producto y canal.
+
+  \item \textbf{Criterio 2} \\
+  \textbf{Dado} un análisis de sensibilidad realizado, \\
+  \textbf{cuando} se identifique una variable que impacta fuertemente en el margen, \\
+  \textbf{entonces} el sistema debe destacarla como "crítica" mediante una etiqueta visual o comentario.
+\end{itemize}
+
+\vspace{1em}
+
+\paragraph{Criterios de aceptación HU8 (opcional): Simulación de restricciones operativas}
+
+\begin{itemize}
+  \item \textbf{Criterio 1} \\
+  \textbf{Dado} un conjunto de restricciones operativas posibles (por ejemplo, cortes de gas o capacidad limitada), \\
+  \textbf{cuando} se seleccione una o varias restricciones en el sistema, \\
+  \textbf{entonces} debe simularse automáticamente el impacto de estas restricciones sobre el margen bruto total y por canal.
+
+  \item \textbf{Criterio 2} \\
+  \textbf{Dado} un escenario con restricciones operativas aplicadas, \\
+  \textbf{cuando} se compare con el escenario base sin restricciones, \\
+  \textbf{entonces} el sistema debe mostrar claramente las diferencias de rendimiento económico y operatividad.
+\end{itemize}
+
+\subsection*{7.4. Épica 4: Visualización y Prueba de Concepto (PoC)}
+
+\paragraph{Criterios de aceptación HU9: Visualización de resultados en dashboards interactivos}
+\begin{itemize}
+  \item \textbf{Criterio 1} \\
+  \textbf{Dado} que el modelo de predicción y simulación ya generó resultados, \\
+  \textbf{cuando} se publiquen en una herramienta de visualización, \\
+  \textbf{entonces} el usuario debe poder consultar métricas clave por producto y canal de forma dinámica.
+  
+  \item \textbf{Criterio 2} \\
+  \textbf{Dado} un dashboard implementado en Power BI o Streamlit, \\
+  \textbf{cuando} el usuario interactúe con filtros de fecha o canal, \\
+  \textbf{entonces} los resultados deben actualizarse automáticamente reflejando la selección.
+\end{itemize}
+
+\vspace{1em}
+
+\paragraph{Criterios de aceptación HU10: Comparación de escenarios}
+\begin{itemize}
+  \item \textbf{Criterio 1} \\
+  \textbf{Dado} un tablero que incluye datos de diferentes escenarios, \\
+  \textbf{cuando} el usuario seleccione un escenario base y uno alternativo, \\
+  \textbf{entonces} el sistema debe mostrar ambos en paralelo con sus diferencias destacadas.
+
+  \item \textbf{Criterio 2} \\
+  \textbf{Dado} que se comparan márgenes y niveles de demanda entre escenarios, \\
+  \textbf{cuando} se utilicen herramientas visuales como gráficos de barras o tablas comparativas, \\
+  \textbf{entonces} el usuario debe poder identificar fácilmente el impacto de las decisiones evaluadas.
+\end{itemize}
+
+\vspace{1em}
+
+\paragraph{Criterios de aceptación HU11 (opcional): Exportación a Excel}
+\begin{itemize}
+  \item \textbf{Criterio 1} \\
+  \textbf{Dado} que el usuario final accede al dashboard, \\
+  \textbf{cuando} seleccione una tabla de resultados, \\
+  \textbf{entonces} debe contar con una opción de exportar a Excel de forma directa y funcional.
+
+  \item \textbf{Criterio 2} \\
+  \textbf{Dado} un archivo Excel exportado desde el sistema, \\
+  \textbf{cuando} el usuario lo abra, \\
+  \textbf{entonces} debe contener los datos visibles en pantalla con las mismas columnas y formatos.
 \end{itemize}
 
 \section{8. Fases de CRISP-DM}
 
-\begin{enumerate}
-  \item \textbf{Comprensión del negocio:} objetivo, valor agregado de IA, métricas de éxito.
-  \item \textbf{Comprensión de los datos:} tipo, origen, cantidad, calidad.
-  \item \textbf{Preparación de los datos:} características clave, transformaciones necesarias.
-  \item \textbf{Modelado:} tipo de problema, algoritmos posibles.
-  \item \textbf{Evaluación del modelo:} métricas de rendimiento.
-  \item \textbf{Despliegue del modelo (opcional):} tipo de despliegue y herramientas.
-\end{enumerate}
+\subsection*{8.1. Comprensión del negocio}
+El objetivo del proyecto es mejorar la planificación financiera en la familia de productos secos (salamines) del ciclo III de la empresa Cagnoli S.A., a través de un sistema inteligente que permita prever la demanda semanal, estimar márgenes brutos por canal y simular escenarios económicos-operativos. El valor agregado del uso de inteligencia artificial (IA) radica en reemplazar métodos heurísticos y subjetivos por herramientas objetivas, basadas en datos históricos y técnicas de \textit{machine learning}. 
+El éxito del proyecto será evaluado mediante mejoras en la precisión del pronóstico, la capacidad de análisis de escenarios, y el uso efectivo del sistema por parte de los equipos de planificación.
+
+\subsection*{8.2. Comprensión de los datos}
+Los datos provienen de diversas fuentes internas, principalmente del sistema ERP de la compañía (Microsoft Dynamics), planillas de costos, inventarios, pedidos y reportes de ventas. Se cuenta con registros históricos de demanda semanal por producto, precios de venta, estructura de costos variables y datos de producción. La calidad de los datos es adecuada aunque presenta desafíos como series incompletas, variaciones de codificación, series con diferente dimensionalidad o a distinto nivel de detalle (granularidad).
+
+\subsection*{8.3. Preparación de los datos}
+Durante esta fase se realizará la limpieza y transformación de los datos, incluyendo:
+\begin{itemize}
+  \item Agregación de la demanda a nivel semanal por producto y canal.
+  \item Tratamiento de valores faltantes y atípicos.
+  \item Creación de nuevas variables explicativas (festividades, clima, tendencias, promociones).
+  \item Normalización de series y construcción de \textit{datasets} de entrenamiento y prueba.
+\end{itemize}
+La preparación de los datos es crítica para garantizar la calidad del modelo predictivo y la estabilidad de las simulaciones.
+
+\subsection*{8.4. Modelado}
+El problema principal es de predicción de series temporales multivariadas y clasificación de escenarios. Se utilizarán modelos estadísticos y de aprendizaje automático como:
+\begin{itemize}
+  \item \textbf{SARIMA} y \textbf{Prophet}, para capturar estacionalidad y tendencias.
+  \item \textbf{XGBoost} y \textbf{Random Forest}, para incorporar múltiples variables predictoras y mejorar la robustez frente al ruido.
+  \item \textbf{Árboles de decisión y análisis de sensibilidad}, para la simulación de escenarios y evaluación de impacto en márgenes.
+\end{itemize}
+
+\subsection*{8.5. Evaluación del modelo}
+Los modelos se evaluarán mediante métricas clásicas de rendimiento predictivo, tales como:
+\begin{itemize}
+  \item \textbf{MAE (Mean Absolute Error)} y \textbf{RMSE (Root Mean Squared Error)} para pronóstico de demanda.
+  \item \textbf{Error absoluto medio en márgenes estimados} para los resultados financieros.
+  \item Validación cruzada con períodos de backtesting y análisis visual de ajuste de las predicciones.
+\end{itemize}
+
+\subsection*{8.6. Despliegue del modelo (opcional)}
+El modelo será implementado inicialmente como una \textbf{prueba de concepto (PoC)}, mediante herramientas de visualización como Power BI o Streamlit. En esta instancia, el sistema funcionará como un tablero interno para los equipos de planificación, permitiendo simular diferentes escenarios y visualizar resultados de predicción. No se prevé integración con el ERP durante esta etapa inicial, aunque sí se contemplan recomendaciones para una futura integración en producción.
+
 
 \section{9. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-A partir de cada HU, descomponer en tareas concretas, técnicas y medibles:
+A continuación, se presenta el desglose técnico de las tareas correspondientes a las historias de usuario HU1 a HU4. Se estima una duración entre 2 y 8 horas por tarea, con una prioridad relativa asignada según su impacto en los entregables. Este desglose servirá como base para la planificación en las secciones siguientes (Diagrama de Gantt y Sprints).
 
-\begin{itemize}
-  \item Duración estimada: entre 2 y 8 h. Evitar tareas genéricas.
-  \item Si una tarea excede 8 h, dividirla.
-  \item Indicar prioridad relativa (Alta, Media, Baja).
-\end{itemize}
+\subsection*{9.1. Épica 1: Modelado de demanda}
 
-\begin{table}[htpb]
+\begin{table}[H]
 \centering
-\begin{tabularx}{\linewidth}{@{}|X|X|c|c|@{}}
+\begin{tabular}{|l|p{6cm}|c|c|}
 \hline
-\rowcolor[HTML]{C0C0C0}
-Historia de usuario & Tarea técnica & Estimación & Prioridad \\ \hline
-HU1 & Tarea 1 HU1 & 6 h & Alta \\ \hline
-HU1 & Tarea 2 HU1 & 8 h & Alta \\ \hline
-HU2 & Tarea 1 HU2 & 5 h & Media \\ \hline
-HU2 & Tarea 2 HU2 & 6 h & Alta \\ \hline
-... & ... & ... & ... \\ \hline
-\end{tabularx}
+\textbf{Historia de usuario} & \textbf{Tarea técnica} & \textbf{Estimación} & \textbf{Prioridad} \\
+\hline
+HU1 & Planificación del modelo de demanda & 10 h & Alta \\
+HU1 & Análisis exploratorio y visualización de series históricas & 12 h & Alta \\
+HU1 & Limpieza y preparación de datos temporales & 12 h & Alta \\
+HU1 & Implementación de modelo SARIMA & 12 h & Alta \\
+HU1 & Implementación de modelo Prophet & 12 h & Alta \\
+HU1 & Ajuste de hiperparámetros y estacionalidad & 12 h & Alta \\
+HU1 & Validación cruzada y comparación de modelos & 12 h & Alta \\
+HU1 & Documentación técnica del modelo & 8 h & Media \\
+HU1 & Testing funcional con datos históricos & 10 h & Alta \\
+HU1 & Presentación de resultados a usuarios & 8 h & Media \\
+\hline
+HU2 & Diseño del enfoque multivariado para XGBoost / RF & 10 h & Alta \\
+HU2 & Selección de variables externas (clima, estacionalidad) & 10 h & Alta \\
+HU2 & Ingeniería de features para modelos supervisados & 12 h & Alta \\
+HU2 & Entrenamiento de modelos XGBoost y Random Forest & 12 h & Alta \\
+HU2 & Evaluación comparativa contra modelos clásicos & 10 h & Alta \\
+HU2 & Visualización de errores y residual analysis & 8 h & Media \\
+HU2 & Documentación de modelos y variables explicativas & 8 h & Media \\
+HU2 & Reunión de feedback con equipo comercial & 8 h & Media \\
+\hline
+HU3 & Diseño del pipeline de datos de costos variables & 10 h & Alta \\
+HU3 & Cálculo dinámico de costos unitarios por producto & 10 h & Alta \\
+HU3 & Integración con datos de precios de venta & 8 h & Alta \\
+HU3 & Estimación de márgenes brutos por canal & 10 h & Alta \\
+HU3 & Análisis de sensibilidad de márgenes & 8 h & Media \\
+HU3 & Validación con equipo financiero & 8 h & Alta \\
+HU3 & Documentación de supuestos de cálculo & 6 h & Media \\
+HU3 & Ajuste final del modelo y revisión & 8 h & Media \\
+\hline
+\end{tabular}
+\caption{Desglose de tareas para HU1 a HU3 (Épica 1: Modelado de demanda).}
 \end{table}
 
-\textbf{Criterios para estimar tiempos:}
-\begin{itemize}
-  \item Considerar dificultad, complejidad técnica y grado de incertidumbre de cada tarea.
-  \item Evitar subestimar el esfuerzo requerido. Si una tarea supera las 8 h, dividirla en subtareas.
-  \item Basar la estimación en la experiencia propia o en referencias de tareas similares.
-\end{itemize}
+\vspace{0.5cm}
+\noindent
+\textbf{Total estimado parcial HU1–HU4:} \textbf{254 horas.}
 
-\textbf{Sobre la prioridad:}
-\begin{itemize}
-  \item Asignar una prioridad relativa (Alta, Media o Baja) según la relevancia funcional de la tarea y su impacto en los entregables.
-  \item Priorizar tareas que estén vinculadas a criterios de aceptación de las HU o que sean necesarias para desbloquear otras.
-  \item Incluir tareas opcionales solo si están bien justificadas.
-\end{itemize}
+\subsection*{9.2. Épica 2: Estimación de márgenes brutos por canal}
 
-\textbf{Recomendaciones generales:}
-\begin{itemize}
-  \item Incluir al menos dos tareas por historia de usuario.
-  \item El total estimado debe ser coherente con la planificación global de unas 600 horas (la cantidad de horas sugeridas para un trabajo de posgrado).
-  \item Este desglose se utilizará en las secciones siguientes para armar el diagrama de Gantt (sección 10) y la planificación de sprints (sección 11).
-  \item Recordar que la calidad del desglose impacta directamente en la calidad de la planificación del proyecto.
-\end{itemize}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|p{6cm}|c|c|}
+\hline
+\textbf{Historia de usuario} & \textbf{Tarea técnica} & \textbf{Estimación} & \textbf{Prioridad} \\
+\hline
+HU4 & Análisis de escenarios críticos históricos & 8 h & Alta \\
+HU4 & Diseño lógico de árbol de decisiones & 8 h & Alta \\
+HU4 & Desarrollo del motor de simulación de escenarios & 12 h & Alta \\
+HU4 & Implementación de pruebas con cambios en precios/volumen & 10 h & Alta \\
+HU4 & Visualización del impacto en márgenes y ventas & 8 h & Media \\
+HU4 & Validación de escenarios con dirección & 6 h & Media \\
+HU4 & Documentación de escenarios y recomendaciones & 6 h & Media \\
+HU4 & Ajustes finales tras feedback del usuario & 6 h & Media \\
+\hline
+HU5 & Revisión bibliográfica de métodos de simulación & 8 h & Alta \\
+HU5 & Diseño de arquitectura para el módulo de escenarios & 12 h & Alta \\
+HU5 & Implementación de lógica de escenarios base y alternativos & 16 h & Alta \\
+HU5 & Integración con outputs de modelos de predicción & |1 h & Alta \\
+HU5 & Validación de resultados y casos de uso (feedback usuario) & |0 h & Alta \\
+HU5 & Documentación funcional y técnica del simulador & 8 h & Media \\
+HU5 & Revisión y ajuste en base a feedback & 6 h & Media \\
+\hline
+\end{tabular}
+\caption{Desglose de tareas para HU4 a HU5 (Épica 2: Estimación de márgenes brutos por canal).}
+\end{table}
+
+\vspace{0.5cm}
+\noindent
+\textbf{Total estimado HU5–HU8:} \textbf{136 horas.}
+
+\subsection*{9.3. Épica 3: Simulación de escenarios operativos y financieros}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|p{6cm}|c|c|}
+\hline
+\textbf{Historia de usuario} & \textbf{Tarea técnica} & \textbf{Estimación} & \textbf{Prioridad} \\
+\hline
+HU6 & Recolección de eventos exógenos históricos (clima, insumos) & 10 h & Alta \\
+HU6 & Modelado de impactos de eventos externos sobre producción & 12 h & Alta \\
+HU6 & Lógica para incorporar shocks en el simulador & 12 h & Alta \\
+HU6 & Casos de validación y contraste de resultados & 10 h & Media \\
+HU6 & Documentación de implementación y casos simulados & 8 h & Media \\
+\hline
+HU7 & Diseño de interfaz para inputs de simulación por usuario & 10 h & Alta \\
+HU7 & Desarrollo de backend para procesamiento dinámico de inputs & 12 h & Alta \\
+HU7 & Testeo de inputs y validación de comportamiento & 8 h & Alta \\
+HU7 & Manual de uso interactivo del simulador & 6 h & Media \\
+HU7 & Feedback de usuarios funcionales y mejora iterativa & 6 h & Media \\
+\hline
+HU8 (opcional) & Simulación de restricciones operativas críticas (transporte, energía) & 10 h & Baja \\
+HU8 (opcional) & Análisis del impacto financiero en márgenes & 10 h & Baja \\
+HU8 (opcional) & Visualización de resultados y casos hipotéticos & 8 h & Baja \\
+HU8 (opcional) & Documentación breve del caso operativo simulado & 4 h & Baja \\
+\hline
+\end{tabular}
+\caption{Desglose de tareas para HU6 a HU8 (Épica 3: Simulación de escenarios operativos y financieros).}
+\end{table}
+
+\vspace{0.5cm}
+\noindent
+\textbf{Total estimado HU5–HU8:} \textbf{126 horas.}
+
+\subsection*{9.4. Épica 4: Visualización y Prueba de Concepto (PoC)}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|p{6cm}|c|c|}
+\hline
+\textbf{Historia de usuario} & \textbf{Tarea técnica} & \textbf{Estimación} & \textbf{Prioridad} \\
+\hline
+HU9 & Diseño de layout para visualización de predicciones y márgenes & 10 h & Alta \\
+HU9 & Desarrollo de dashboards interactivos en Power BI o Streamlit & 14 h & Alta \\
+HU9 & Conexión a fuentes de datos del modelo & 10 h & Alta \\
+HU9 & Validación de visualizaciones con usuarios clave & 8 h & Alta \\
+HU9 & Ajuste de gráficos y filtros según feedback & 6 h & Media \\
+HU9 & Documentación de uso de dashboards & 4 h & Media \\
+\hline
+HU10 & Diseño de panel comparativo de escenarios & 8 h & Media \\
+HU10 & Implementación de lógica de selección y comparación de escenarios & 10 h & Media \\
+HU10 & Pruebas de casos base vs. alternativos & 8 h & Media \\
+HU10 & Documentación técnica y funcional del panel & 6 h & Media \\
+\hline
+HU11 (opcional) & Desarrollo de funcionalidad de exportación a Excel & 6 h & Baja \\
+HU11 (opcional) & Validación de formato de exportación con usuarios & 4 h & Baja \\
+HU11 (opcional) & Documentación breve de exportación y soporte & 2 h & Baja \\
+\hline
+\end{tabular}
+\caption{Desglose de tareas para HU9 a HU11 (Épica 4: Visualización y Prueba de Concepto (PoC)).}
+\end{table}
+
+\vspace{0.5cm}
+\noindent
+\textbf{Total estimado parcial HU9–HU11:} \textbf{96 horas.}
+
+\vspace{0.2cm}
+\noindent\dotfill
+
+\vspace{0.5cm}
+\noindent
+\textbf{Cantidad total de horas: (612 h)}
+
+\newpage
 
 
 \section{10. Diagrama de Gantt}
