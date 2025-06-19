@@ -66,6 +66,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 2      & Se completa hasta el punto 9 inclusive                & {20} de {mayo} de 2025 \\ \hline
 3      & Se completa hasta el punto 12 inclusive                & {27} de {mayo} de 2025 \\ \hline
 4      & Se completa el plan	                                 & {3} de {junio} de 2025 \\ \hline
+5      & Se realizan las correcciones finales	                  & {16} de {junio} de 2025 \\ \hline
 
 % Si hay más correcciones pasada la versión 4 también se deben especificar acá
 
@@ -85,7 +86,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en \textcolor{black}{desarrollar un modelo basado en inteligencia artificial para predecir la demanda y los márgenes brutos de productos secos en Cagnoli S.A., integrándolo al proceso de planificación financiera para mejorar la toma de decisiones y simular escenarios}. El trabajo tendrá un presupuesto preliminar estimado de 677 horas, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \textcolor{red} {\fechaFinalName}.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en \textcolor{black}{desarrollar un modelo basado en inteligencia artificial para predecir la demanda y los márgenes brutos de productos secos en Cagnoli S.A., integrándolo al proceso de planificación financiera para mejorar la toma de decisiones y simular escenarios}. El trabajo tendrá un presupuesto preliminar estimado de 677 horas y un costo de USD 27.080, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \textcolor{red} {\fechaFinalName}.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -336,7 +337,7 @@ Para la ponderación en cada uno de ellos se utilizará la serie de Fibonacci de
 
 En esta sección se definen los criterios de aceptación para cada historia de usuario del \textit{backlog}, con el objetivo de establecer condiciones específicas, medibles y verificables que permitan validar la funcionalidad desarrollada. 
 
-Se utiliza el \textbf{modelo Gherkin}, un enfoque ampliamente adoptado en metodologías ágiles para describir escenarios de prueba funcional en lenguaje natural estructurado. Este modelo sigue una sintaxis sencilla basada en las siguientes expresiones clave:
+Se utiliza el modelo Gherkin, un enfoque ampliamente adoptado en metodologías ágiles para describir escenarios de prueba funcional en lenguaje natural estructurado. Este modelo sigue una sintaxis sencilla basada en las siguientes expresiones clave:
 
 \begin{itemize}
   \item \textbf{Dado (Given)}: establece el contexto inicial o condiciones previas.
@@ -553,21 +554,21 @@ La preparación de los datos es crítica para garantizar la calidad del modelo p
 \subsection*{8.4. Modelado}
 El problema principal es de predicción de series temporales multivariadas y clasificación de escenarios. Se utilizarán modelos estadísticos y de aprendizaje automático como:
 \begin{itemize}
-  \item \textbf{SARIMA} y \textbf{Prophet}, para capturar estacionalidad y tendencias.
-  \item \textbf{XGBoost} y \textbf{Random Forest}, para incorporar múltiples variables predictoras y mejorar la robustez frente al ruido.
-  \item \textbf{Árboles de decisión y análisis de sensibilidad}, para la simulación de escenarios y evaluación de impacto en márgenes.
+  \item SARIMA y Prophet, para capturar estacionalidad y tendencias.
+  \item XGBoost y \textit{Random Forest}, para incorporar múltiples variables predictoras y mejorar la robustez frente al ruido.
+  \item Árboles de decisión y análisis de sensibilidad, para la simulación de escenarios y evaluación de impacto en márgenes.
 \end{itemize}
 
 \subsection*{8.5. Evaluación del modelo}
 Los modelos se evaluarán mediante métricas clásicas de rendimiento predictivo, tales como:
 \begin{itemize}
-  \item \textbf{MAE (Mean Absolute Error)} y \textbf{RMSE (Root Mean Squared Error)} para pronóstico de demanda.
-  \item \textbf{Error absoluto medio en márgenes estimados} para los resultados financieros.
-  \item Validación cruzada con períodos de backtesting y análisis visual de ajuste de las predicciones.
+  \item MAE (\textit{Mean Absolute Error}) y RMSE (\textit{Root Mean Squared Error}) para pronóstico de demanda.
+  \item Error absoluto medio en márgenes estimados para los resultados financieros.
+  \item Validación cruzada con períodos de \textit{backtesting} y análisis visual de ajuste de las predicciones.
 \end{itemize}
 
 \subsection*{8.6. Despliegue del modelo (opcional)}
-El modelo será implementado inicialmente como una \textbf{prueba de concepto (PoC)}, mediante herramientas de visualización como Power BI o Streamlit. En esta instancia, el sistema funcionará como un tablero interno para los equipos de planificación, con la capacidad de simular diferentes escenarios y visualizar resultados de predicción. No se prevé integración con el ERP durante esta etapa inicial, aunque sí se contemplan recomendaciones para una futura integración en producción.
+El modelo será implementado inicialmente como una prueba de concepto (PoC), mediante herramientas de visualización como Power BI o Streamlit. En esta instancia, el sistema funcionará como un tablero interno para los equipos de planificación, con la capacidad de simular diferentes escenarios y visualizar resultados de predicción. No se prevé integración con el ERP durante esta etapa inicial, aunque sí se contemplan recomendaciones para una futura integración en producción.
 
 
 \section{9. Desglose del trabajo en tareas}
@@ -596,14 +597,14 @@ N/A & Ajuste del documento según feedback & 3 h & Alta \\
 N/A & Preparación y entrega formal del plan & 4 h & Alta \\
 \hline
 \end{tabular}
-\caption{Desglose de tareas para la planificación del proyecto}
+\caption{Desglose de tareas para la planificación del proyecto.}
 \end{table}
 
 \vspace{0.5cm}
 \noindent
 \textbf{Total estimado parcial:} \textbf{32 horas.}
 
-\subsection*{9.1. Épica 1: Modelado de demanda}
+\subsection*{9.1. Épica 1: modelado de demanda}
 
 \begin{table}[H]
 \centering
@@ -631,7 +632,7 @@ HU1 & Revisión de outputs y trazabilidad de resultados & 5 h & Alta \\
 HU1 & Presentación de resultados a usuarios & 8 h & Media \\
 \hline
 \end{tabular}
-\caption{Desglose de tareas para HU1 (Épica 1: Modelado de demanda)}
+\caption{Desglose de tareas para HU1 (Épica 1: modelado de demanda.)}
 \end{table}
 
 \begin{table}[H]
@@ -667,14 +668,14 @@ HU3 & Documentación de supuestos de cálculo & 6 h & Media \\
 HU3 & Ajuste final del modelo y revisión & 8 h & Media \\
 \hline
 \end{tabular}
-\caption{Desglose de tareas para HU2 y HU3 (Épica 1: Modelado de demanda)}
+\caption{Desglose de tareas para HU2 y HU3 (Épica 1: modelado de demanda).}
 \end{table}
 
 \vspace{0.2cm}
 \noindent
 \textbf{Total estimado parcial HU1–HU3:} \textbf{254 horas.}
 
-\subsection*{9.2. Épica 2: Estimación de márgenes brutos por canal}
+\subsection*{9.2. Épica 2: estimación de márgenes brutos por canal}
 
 \begin{table}[H]
 \centering
@@ -706,14 +707,14 @@ HU5 & Documentación funcional y técnica del simulador & 8 h & Media \\
 HU5 & Revisión y ajuste en base a feedback & 6 h & Media \\
 \hline
 \end{tabular}
-\caption{Desglose de tareas para HU4 a HU5 (Épica 2: Estimación de márgenes brutos por canal).}
+\caption{Desglose de tareas para HU4 a HU5 (Épica 2: estimación de márgenes brutos por canal).}
 \end{table}
 
 \vspace{0.2cm}
 \noindent
 \textbf{Total estimado HU4-HU5:} \textbf{135 horas.}
 
-\subsection*{9.3. Épica 3: Simulación de escenarios operativos y financieros}
+\subsection*{9.3. Épica 3: simulación de escenarios operativos y financieros}
 
 \begin{table}[H]
 \centering
@@ -748,14 +749,14 @@ HU8 (opcional) & Visualización de resultados y diseño de casos & 8 h & Baja \\
 HU8 (opcional) & Documentación breve del caso operativo simulado & 4 h & Baja \\
 \hline
 \end{tabular}
-\caption{Desglose de tareas para HU6 a HU8 (Épica 3: Simulación de escenarios operativos y financieros).}
+\caption{Desglose de tareas para HU6 a HU8 (Épica 3: simulación de escenarios operativos y financieros).}
 \end{table}
 
 \vspace{0.5cm}
 \noindent
 \textbf{Total estimado HU6-HU8:} \textbf{126 horas.}
 
-\subsection*{9.4. Épica 4: Visualización y Prueba de Concepto (PoC)}
+\subsection*{9.4. Épica 4: visualización y Prueba de Concepto (PoC)}
 
 \begin{table}[H]
 \centering
@@ -786,7 +787,7 @@ HU11 (opcional) & Validación de formato y campos exportables & 2 h & Baja \\
 HU11 (opcional) & Documentación breve de exportación y soporte & 2 h & Baja \\
 \hline
 \end{tabular}
-\caption{Desglose de tareas para HU9 a HU11 (Épica 4: Visualización y Prueba de Concepto (PoC)).}
+\caption{Desglose de tareas para HU9 a HU11 (Épica 4: visualización y Prueba de Concepto (PoC)).}
 \end{table}
 
 \vspace{0.5cm}
@@ -809,12 +810,22 @@ N/A & Redacción de memoria (parte 2) & 8 h & Alta \\
 N/A & Preparación de defensa & 8 h & Alta \\
 \hline
 \end{tabular}
-\caption{Desglose de tareas para la documentación y presentación final).}
+\caption{Desglose de tareas para la documentación y presentación final.}
 \end{table}
 
 \vspace{0.5cm}
 \noindent
 \textbf{Total estimado parcial:} \textbf{34 horas.}
+
+\noindent
+Estimación del costo total del proyecto: \\
+Dado que el presente trabajo final requiere una dedicación estimada de 677 horas, y considerando un valor de referencia de USD 40 por hora de ingeniería, el costo total estimado del proyecto asciende a:
+
+\begin{center}
+\textbf{677 h $\times$ USD 40/h = USD 27.080}
+\end{center}
+
+Esta estimación no representa un costo real incurrido, sino una valorización técnica del esfuerzo y dedicación requeridos para su ejecución, basada en estándares del mercado para profesionales especializados en inteligencia artificial y planificación financiera.
 
 \vspace{0.2cm}
 \noindent\dotfill
@@ -829,11 +840,11 @@ N/A & Preparación de defensa & 8 h & Alta \\
 \section{10. Diagrama de Gantt}
 \label{sec:gantt}
 
-El presente diagrama de Gantt representa de forma visual y cronológica todas las tareas planificadas para el desarrollo del trabajo final. La planificación contempla un total de aproximadamente 679 horas, distribuidas entre tareas técnicas (modelado, simulación, desarrollo de dashboards, validaciones, etc.) y tareas no técnicas (planificación, documentación, redacción de entregables y preparación de la presentación final).
+El presente diagrama de Gantt representa de forma visual y cronológica todas las tareas planificadas para el desarrollo del trabajo final. La planificación contempla un total de aproximadamente 677 horas, distribuidas entre tareas técnicas (modelado, simulación, desarrollo de dashboards, validaciones, etc.) y tareas no técnicas (planificación, documentación, redacción de entregables y preparación de la presentación final).
 
-Como primer paso en la planificación, se realizó una distribución detallada de tareas en 15 sprints quincenales, iniciando luego de la fase inicial de planificación (29/04/2025 al 13/06/2025). Esta división en sprints permitió agrupar tareas según su prioridad, orden lógico y dependencias técnicas, con el fin de asegurar una carga equilibrada de entre 45 y 50 horas por sprint. A partir de esta organización, se construyó el cronograma general representado en el diagrama de Gantt que se muestra a continuación.
+Como primer paso en la planificación, se realizó una distribución detallada de tareas en 15 sprints quincenales. Estos sprints comenzarán luego de la fase inicial de planificación (29/04/2025 al 13/06/2025). Esta división en sprints permitió agrupar tareas según su prioridad, orden lógico y dependencias técnicas, con el fin de asegurar una carga equilibrada de entre 45 y 50 horas por sprint. A partir de esta organización, se construyó el cronograma general representado en el diagrama de Gantt que se muestra a continuación.
 
-El diagrama está estructurado con las tareas organizadas verticalmente y el tiempo representado en el eje horizontal. Cada tarea se asocia a un sprint específico, y se ha utilizado una codificación de colores para distinguir entre tareas técnicas (azul) y no técnicas (naranja). Además, se han configurado las dependencias entre tareas para reflejar adecuadamente la lógica del flujo de trabajo, evitando solapamientos innecesarios y permitiendo la trazabilidad del avance del proyecto.
+El diagrama está estructurado con las tareas organizadas verticalmente y el tiempo representado en el eje horizontal. Cada tarea se asocia a un sprint específico, y se ha utilizado una codificación de colores para distinguir entre tareas técnicas (azul) y no técnicas (naranja). Además, se han configurado las dependencias entre tareas para reflejar adecuadamente la lógica del flujo de trabajo, con el fin de evitar solapamientos innecesarios y permitiendo la trazabilidad del avance del proyecto.
 
 Este cronograma inicia con las actividades de planificación del proyecto (Etapa 0) y culmina con la entrega final y preparación de la defensa, hacia mediados de enero de 2026. En las siguientes figuras se presenta el diagrama de Gantt del proyecto por partes:
 
@@ -886,7 +897,7 @@ Este cronograma inicia con las actividades de planificación del proyecto (Etapa
 
 El objetivo de esta sección es organizar la ejecución del proyecto en sprints de trabajo con una distribución equilibrada de la carga horaria. La planificación abarca un total de aproximadamente 600 horas, de las cuales entre 480 y 500 horas corresponden a tareas técnicas, y entre 100 y 120 horas a tareas no técnicas, como planificación, redacción de la memoria y preparación de la defensa.
 
-Los sprints definidos tienen una duración de dos semanas cada uno, comenzando el 16 de junio de 2025, tras finalizar la etapa de planificación. En total se estructuraron 15 sprints, incluyendo uno final destinado exclusivamente a las tareas de cierre del proyecto. La asignación de tareas por sprint se realizó a partir del desglose previo de historias de usuario y tareas técnicas, respetando un límite de entre 45 y 50 horas por sprint.
+Los sprints definidos tienen una duración de dos semanas cada uno. El primer sprint comienza el 16 de junio de 2025, tras finalizar la etapa de planificación. En total se estructuraron 15 sprints, de los cuales se considera que el último estará destinado exclusivamente a las tareas de cierre del proyecto. La asignación de tareas por sprint se realizó a partir del desglose previo de historias de usuario y tareas técnicas, respetando un límite de entre 45 y 50 horas por sprint.
 
 La tabla incluida en esta sección muestra cada sprint junto con las tareas que lo componen, el número de horas estimadas, el responsable (el autor del proyecto) y el porcentaje de avance previsto o completado. Esta planificación permite establecer prioridades, realizar un seguimiento riguroso del progreso y facilitar instancias de revisión periódica.
 
@@ -957,7 +968,7 @@ Sprint 4 & HU2 & Entrenamiento y validación de XGBoost & 6 h & Alumno & 0\% \\ 
 Sprint 4 & HU2 & Entrenamiento y validación de Random Forest & 6 h & Alumno & 0\% \\ \hline
 Sprint 4 & HU2 & Comparación con SARIMA y Prophet en conjunto de test & 5 h & Alumno & 0\% \\ \hline
 Sprint 4 & HU2 & Visualización de resultados y análisis de precisión & 5 h & Alumno & 0\% \\ \hline
-Sprint 4 & HU2 & Visualización de errores y residual analysis & 8 h & Alumno & 0\% \\ \hline
+Sprint 4 & HU2 & Visualización de errores y \textit{residual analysis} & 8 h & Alumno & 0\% \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -1121,10 +1132,10 @@ El presente proyecto se apoya en el uso de datos operativos, comerciales y finan
 Los datos utilizados no incluyen información personal de clientes, empleados ni terceros identificables, por lo tanto no se encuentran comprendidos bajo la Ley Nacional 25.326 de Protección de Datos Personales (Argentina), ni bajo el Reglamento General de Protección de Datos de la Unión Europea (GDPR), ni normativas específicas como HIPAA (para el ámbito de la salud). Sin embargo, al trabajar con datos de carácter confidencial, operativos y estratégicos de una empresa, deben observarse los siguientes principios normativos y éticos:
 
 \begin{itemize}
-  \item \textbf{Confidencialidad}: todo el procesamiento y análisis de datos se realiza bajo un acuerdo explícito con la empresa, garantizando la confidencialidad de la información.
-  \item \textbf{Licitud y finalidad}: los datos son utilizados exclusivamente para los fines establecidos en el marco de este proyecto académico y no serán reutilizados con otros propósitos sin el consentimiento explícito de la empresa.
-  \item \textbf{Minimización de datos}: se evita recolectar información innecesaria, y se emplea únicamente aquella requerida para alcanzar los objetivos del proyecto.
-  \item \textbf{Transparencia}: se documenta el origen, tratamiento y aplicación de cada conjunto de datos, lo que facilita auditorías internas o académicas.
+  \item Confidencialidad: todo el procesamiento y análisis de datos se realiza bajo un acuerdo explícito con la empresa, garantizando la confidencialidad de la información.
+  \item Licitud y finalidad: los datos son utilizados exclusivamente para los fines establecidos en el marco de este proyecto académico y no serán reutilizados con otros propósitos sin el consentimiento explícito de la empresa.
+  \item Minimización de datos: se evita recolectar información innecesaria, y se emplea únicamente aquella requerida para alcanzar los objetivos del proyecto.
+  \item Transparencia: se documenta el origen, tratamiento y aplicación de cada conjunto de datos, lo que facilita auditorías internas o académicas.
 \end{itemize}
 
 \subsection*{12.2. Condiciones de uso de los datos}
@@ -1132,10 +1143,10 @@ Los datos utilizados no incluyen información personal de clientes, empleados ni
 El acceso a los datos fue autorizado por la organización en el marco de un proyecto colaborativo, donde el autor del presente trabajo se desempeña como consultor externo. Esta relación garantiza un marco de trabajo ético y profesional, bajo los siguientes términos:
 
 \begin{itemize}
-  \item \textbf{Acceso controlado}: los datos no fueron compartidos públicamente ni almacenados en plataformas abiertas. El almacenamiento y procesamiento se realizará en entornos locales o corporativos seguros.
-  \item \textbf{No publicación sin anonimización}: en caso de presentaciones académicas o publicaciones, cualquier dato será anonimizado o presentado de forma agregada, de modo de preservar la confidencialidad del negocio.
-  \item \textbf{Sin involucramiento de datos personales}: no se procesan nombres, identificadores personales, correos electrónicos ni ningún tipo de dato sensible sobre personas físicas.
-  \item \textbf{Consentimiento institucional}: el uso de los datos fue aprobado por los responsables de la empresa con el objetivo de contribuir al desarrollo del sistema de planificación y control.
+  \item Acceso controlado: los datos no fueron compartidos públicamente ni almacenados en plataformas abiertas. El almacenamiento y procesamiento se realizará en entornos locales o corporativos seguros.
+  \item No publicación sin anonimización: en caso de presentaciones académicas o publicaciones, cualquier dato será anonimizado o presentado de forma agregada, de modo de preservar la confidencialidad del negocio.
+  \item Sin involucramiento de datos personales: no se procesan nombres, identificadores personales, correos electrónicos ni ningún tipo de dato sensible sobre personas físicas.
+  \item Consentimiento institucional: el uso de los datos fue aprobado por los responsables de la empresa con el objetivo de contribuir al desarrollo del sistema de planificación y control.
 \end{itemize}
 
 \subsection*{12.3. Evaluación de restricciones y viabilidad}
@@ -1149,10 +1160,10 @@ No obstante, se reconoce que parte de la información tiene valor estratégico p
 El proyecto promueve buenas prácticas de gobernanza de datos. Para lograr esto se asegura lo siguiente:
 
 \begin{itemize}
-  \item \textbf{Registro detallado de las fuentes de datos utilizadas}, sus características, y las transformaciones aplicadas.
-  \item \textbf{Reproducibilidad del análisis}: todos los procesos pueden ser auditados internamente por la empresa.
-  \item \textbf{Integración con políticas internas de seguridad}: el diseño del modelo considera que, en etapas futuras, podría integrarse con herramientas empresariales como Power BI, Streamlit o el ERP Microsoft Dynamics, bajo protocolos seguros.
-  \item \textbf{Documentación y versionado}: cada etapa de desarrollo ha sido documentada para facilitar el traspaso y sostenibilidad del sistema en el tiempo.
+  \item Registro detallado de las fuentes de datos utilizadas, sus características, y las transformaciones aplicadas.
+  \item Reproducibilidad del análisis: todos los procesos pueden ser auditados internamente por la empresa.
+  \item Integración con políticas internas de seguridad: el diseño del modelo considera que, en etapas futuras, podría integrarse con herramientas empresariales como Power BI, Streamlit o el ERP Microsoft Dynamics, bajo protocolos seguros.
+  \item Documentación y versionado: cada etapa de desarrollo ha sido documentada para facilitar el traspaso y sostenibilidad del sistema en el tiempo.
 \end{itemize}
 
 \subsection*{Conclusión}
@@ -1163,9 +1174,9 @@ El presente proyecto cumple con los lineamientos legales, éticos y técnicos en
 \section{13. Gestión de riesgos}
 \label{sec:riesgos}
 
-En esta sección se identifican y analizan los principales riesgos asociados al desarrollo del proyecto "Aplicación de inteligencia artificial a la planificación financiera de productos secos en el ciclo III: demanda, márgenes y simulación de escenarios". Se evalúan tanto su severidad (S) como su probabilidad de ocurrencia (O), utilizando una escala del 1 al 10, y se calcula el RPN (Risk Priority Number) como producto de ambas variables. A continuación, se presentan las justificaciones, la tabla de riesgos y los planes de mitigación correspondientes.
+En esta sección se identifican y analizan los principales riesgos asociados al desarrollo del presente proyecto. Se evalúan tanto su severidad (S) como su probabilidad de ocurrencia (O), utilizando una escala del 1 al 10, y se calcula el RPN (Risk Priority Number) como producto de ambas variables. A continuación, se presentan las justificaciones, la tabla de riesgos y los planes de mitigación correspondientes.
 
-\textbf{a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:}
+a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
 
 
 Riesgo 1: retrasos en la entrega de datos por parte del área financiera o comercial.
@@ -1228,8 +1239,9 @@ Riesgo 10: cambios en prioridades internas de la empresa que posterguen validaci
 	\item Ocurrencia (O): 4. Aunque el proyecto está acordado, pueden cambiar los tiempos según la coyuntura.
 \end{itemize}
 
+\newpage
+b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
 
-\textbf{b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)}
 
 \begin{table}[htpb]
 \centering
@@ -1239,16 +1251,16 @@ Riesgo 10: cambios en prioridades internas de la empresa que posterguen validaci
 \rowcolor[HTML]{C0C0C0}
 \textbf{Riesgo} & \textbf{S} & \textbf{O} & \textbf{RPN} & \textbf{S*} & \textbf{O*} & \textbf{RPN*} \\
 \hline
-1. Retraso en entrega de datos & 8 & 5 & 40 & 6 & 3 & 18 \\
-2. Incompatibilidad de formatos de datos & 6 & 6 & 36 & 4 & 4 & 16 \\
-3. Modelos no robustos a cambios estacionales & 7 & 6 & 42 & 5 & 4 & 20 \\
-4. Falta de disponibilidad del responsable & 8 & 4 & 32 & - & - & - \\
-5. Escasa participación en validación de escenarios & 6 & 5 & 30 & 4 & 3 & 12 \\
-6. Fallos técnicos en entorno local & 9 & 4 & 36 & 5 & 3 & 15 \\
-7. Problemas en integración márgenes-demanda & 7 & 5 & 35 & 5 & 3 & 15 \\
-8. Rechazo por falta de explicabilidad & 6 & 3 & 18 & - & - & - \\
-9. Pérdida de avances sin backup & 7 & 2 & 14 & 3 & 1 & 3 \\
-10. Cambio de prioridades internas & 6 & 4 & 24 & - & - & - \\
+1. Retraso en entrega de datos & 8 & 5 & \cellcolor{red!30}40 & 6 & 3 & \cellcolor{yellow!30}18 \\
+2. Incompatibilidad de formatos de datos & 6 & 6 & \cellcolor{red!30}36 & 4 & 4 & \cellcolor{yellow!30}16 \\
+3. Modelos no robustos a cambios estacionales & 7 & 6 & \cellcolor{red!30}42 & 5 & 4 & \cellcolor{yellow!30}20 \\
+4. Falta de disponibilidad del responsable & 8 & 4 & \cellcolor{yellow!30}32 & - & - & - \\
+5. Escasa participación en validación de escenarios & 6 & 5 & \cellcolor{yellow!30}30 & - & - & - \\
+6. Fallos técnicos en entorno local & 9 & 4 & \cellcolor{red!30}36 & 5 & 3 & \cellcolor{yellow!30}15 \\
+7. Problemas en integración márgenes-demanda & 7 & 5 & \cellcolor{red!30}35 & 5 & 3 & \cellcolor{yellow!30}15 \\
+8. Rechazo por falta de explicabilidad & 6 & 3 & \cellcolor{yellow!30}18 & - & - & - \\
+9. Pérdida de avances sin backup & 7 & 2 & \cellcolor{yellow!30}14 & - & - & - \\
+10. Cambio de prioridades internas & 6 & 4 & \cellcolor{yellow!30}24 & - & - & - \\
 \hline
 \end{tabular}
 \caption{Tabla de gestión de riesgos (se considera crítica toda RPN mayor o igual a 35).}
@@ -1260,39 +1272,44 @@ Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean may
 
 Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
 
-\textbf{c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:}
+c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
 
-Dado que varios de los riesgos identificados comparten factores de origen comunes, (como la dependencia de datos externos, limitaciones técnicas y plazos acotados), se adopta una estrategia general de mitigación centrada en: (i) validación temprana, (ii) automatización de tareas críticas, (iii) coordinación proactiva con áreas responsables y (iv) planificación de escenarios alternativos. Esta estrategia se adapta específicamente a cada riesgo para reducir su severidad y/o probabilidad de ocurrencia.
+Dado que varios de los riesgos identificados comparten factores de origen comunes, (como la dependencia de datos externos, limitaciones técnicas y plazos acotados), se adopta una estrategia general de mitigación centrada en: (I) validación temprana, (II) automatización de tareas críticas, (III) coordinación proactiva con áreas responsables y (IV) planificación de escenarios alternativos. Esta estrategia se adapta específicamente a cada riesgo para reducir su severidad y/o probabilidad de ocurrencia.
 
-Riesgo 1: Retrasos en la entrega de datos por parte del área financiera o comercial.
+Riesgo 1: retrasos en la entrega de datos por parte del área financiera o comercial.
+
 Plan de mitigación específico: coordinar reuniones tempranas para alinear expectativas de entrega, generar alertas automáticas ante demoras y contar con fuentes de datos de respaldo.
 \begin{itemize}
 	\item Severidad (S):  6. Se reduce  mediante una mayor capacidad de reacción frente a demoras previstas.
 	\item Ocurrencia (O): 3. Se reduce al establecer canales de comunicación y fechas acordadas formalmente.
 \end{itemize}
 
-Riesgo 2: Incompatibilidad entre formatos de datos extraídos del ERP y lo requerido por el modelo
+Riesgo 2: incompatibilidad entre formatos de datos extraídos del ERP y lo requerido por el modelo
+
 Plan de mitigación específico: desarrollar scripts de conversión automatizados y definir plantillas estándar para el intercambio de datos desde el inicio del proyecto.
 \begin{itemize}
 	\item Severidad (S*): 4. Se reduce al evitar errores manuales y acelerar la adaptación de datos.
 	\item Probabilidad de ocurrencia (O*): 4. Disminuye con la validación temprana de estructuras de datos.
 \end{itemize}
 
-Riesgo 3: Incertidumbre en el comportamiento de modelos de IA ante cambios estacionales abruptos
+Riesgo 3: incertidumbre en el comportamiento de modelos de IA ante cambios estacionales abruptos
+
 Plan de mitigación específico: aplicar validación cruzada temporal, incorporar variables exógenas (clima, calendario), y mantener actualizados los modelos con nuevos datos.
 \begin{itemize}
 	\item Severidad (S*): 5. Disminuye al anticipar escenarios adversos.
 	\item Probabilidad de ocurrencia (O*): 4. Se reduce mediante ajustes periódicos de los modelos.
 \end{itemize}
 
-Riesgo 6: Fallos técnicos en ejecución de modelos (capacidad limitada en entorno local)
+Riesgo 6: fallos técnicos en ejecución de modelos (capacidad limitada en entorno local)
+
 Plan de mitigación específico: preparar entorno de trabajo en la nube como alternativa, reducir el volumen de datos en pruebas intermedias y optimizar código.
 \begin{itemize}
 	\item Severidad (S*): 7. Baja al contar con opciones escalables y respaldo técnico.
 	\item Probabilidad de ocurrencia (O*): 2. Se reduce con planificación anticipada de infraestructura.
 \end{itemize}
 
-Riesgo 7: Dificultad para integrar márgenes y demanda en simulación en el tiempo proyectado
+Riesgo 7: dificultad para integrar márgenes y demanda en simulación en el tiempo proyectado
+
 Plan de mitigación específico: modularizar la simulación por componentes (demanda y márgenes por separado), establecer entregables parciales y validar lógica por fases.
 \begin{itemize}
 	\item Severidad (S*): 5. Se reduce por una mejor organización del desarrollo.
